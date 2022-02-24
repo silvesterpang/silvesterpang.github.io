@@ -26,7 +26,7 @@ hugo new site <FolderName>
 
 ### new post
 ```
-hugo new posts/hello-world.md
+hugo new post/hello-world.md
 ```
 
 ### preview site 
