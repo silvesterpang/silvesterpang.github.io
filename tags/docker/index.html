@@ -2,7 +2,8 @@
 <head>
 <meta charset=utf-8>
 <title>
-Tags | A Fox's Notes
+Tag → docker
+| A Fox's Notes
 </title>
 <link href=//cdn.jsdelivr.net rel=dns-prefetch>
 <link href=//cdnjs.cloudflare.com rel=dns-prefetch>
@@ -16,11 +17,11 @@ Tags | A Fox's Notes
 <meta name=twitter:image content="/images/avatar.png">
 <meta property="og:type" content="website">
 <meta property="og:title" content="A Fox's Notes">
-<meta property="og:url" content="https://silvesterpang.github.io/tags/">
+<meta property="og:url" content="https://silvesterpang.github.io/tags/docker/">
 <meta property="og:image" content="/images/avatar.png">
 <meta name=generator content="Hugo 0.92.2">
-<link rel=canonical href=https://silvesterpang.github.io/tags/>
-<link rel=alternate type=application/rss+xml href=https://silvesterpang.github.io/tags/index.xml title="A Fox's Notes">
+<link rel=canonical href=https://silvesterpang.github.io/tags/docker/>
+<link rel=alternate type=application/rss+xml href=https://silvesterpang.github.io/tags/docker/index.xml title="A Fox's Notes">
 <meta name=renderer content="webkit">
 <meta name=viewport content="width=device-width,initial-scale=1">
 <meta name=format-detection content="telephone=no,email=no,adress=no">
@@ -68,8 +69,7 @@ Tags | A Fox's Notes
 <li class=menu-item>
 <a href=/>Home</a>
 </li>
-<li class="menu-item
-is-active">
+<li class=menu-item>
 <a href=/tags/>Tags</a>
 </li>
 </ul>
@@ -79,20 +79,21 @@ is-active">
 <ul class=social-list></ul>
 </nav>
 </header>
-<section class="main post-detail terms-list">
-<header class=post-header>
-<h1 class=post-title>Tags</h1>
+<section class="main post-list">
+<header class="list-header offscreen">
+<h2 class=list-label>Posts List</h2>
 </header>
-<div class=tags-cloud>
-<a href=/tags/synology/ class=tag-m>synology</a>
-<a href=/tags/docker/ class=tag-s>docker</a>
-<a href=/tags/git/ class=tag-s>git</a>
-<a href=/tags/hugo/ class=tag-s>hugo</a>
-<a href=/tags/macos/ class=tag-s>macos</a>
-<a href=/tags/portainer/ class=tag-s>portainer</a>
-<a href=/tags/resilio/ class=tag-s>resilio</a>
-<a href=/tags/tortoisegit/ class=tag-s>tortoisegit</a>
-</div>
+<article class=post-entry>
+<header class=post-header>
+<h3 class=post-title><a href=https://silvesterpang.github.io/post/docker-update-container/ class=post-link>Docker Update Container</a></h3>
+<p class=post-meta>@Fox · Feb 25, 2022 · 1 min read</p>
+</header>
+<p class=post-summary>Upgrade container cmd use portainer as example
+sudo docker stop portainer sudo docker rm portainer #for docker ce sudo docker pull cr.portainer.io/portainer/portainer-ce:latest sudo docker run -d -p 8000:8000 -p 9000:9000 -p 9443:9443 \ --name=portainer --restart=always \ -v /var/run/docker.sock:/var/run/docker.sock \ -v portainer_data:/data \ cr.portainer.io/portainer/portainer-ce:latest #for docker ee sudo docker pull cr.portainer.io/portainer/portainer-ee:latest sudo docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ee:latest </p>
+<footer class=post-footer>
+<a class=read-more href=https://silvesterpang.github.io/post/docker-update-container/>Read More →</a>
+</footer>
+</article>
 </section>
 <footer class=site-footer>
 <p>© 2017-2022 A Fox's Notes</p>

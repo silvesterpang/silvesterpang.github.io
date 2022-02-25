@@ -1,28 +1,28 @@
 <!doctype html><html lang=en-us>
 <head>
 <meta charset=utf-8>
-<title>Block .DS_Store Files on NAS</title>
+<title>Docker Update Container</title>
 <link href=//cdn.jsdelivr.net rel=dns-prefetch>
 <link href=//cdnjs.cloudflare.com rel=dns-prefetch>
 <link href=//at.alicdn.com rel=dns-prefetch>
 <link href=//fonts.googleapis.com rel=dns-prefetch>
 <link href=//fonts.gstatic.com rel=dns-prefetch>
-<meta name=description content="Intro MacOS always write DS_Store files on network share. These files are used by MacOS to store custom attributes but it is useless on non MacOS. So, it is better to clean up these existing DS_Store files and block these files on NAS permanently (Synology).
-Clean existing .DS_Store files  Enable SSH and login to NAS find / -name &amp;quot;.DS_Store&amp;quot; -delete  Set VETO files to block .DS_Store on NAS  Go to &amp;ldquo;Control Panel&amp;rdquo; -&amp;gt; &amp;ldquo;File Services&amp;rdquo; -&amp;gt; &amp;ldquo;Advanced Settings&amp;rdquo; Check Veto files Input &amp;ldquo;/.">
+<meta name=description content="Upgrade container cmd use portainer as example
+sudo docker stop portainer sudo docker rm portainer #for docker ce sudo docker pull cr.portainer.io/portainer/portainer-ce:latest sudo docker run -d -p 8000:8000 -p 9000:9000 -p 9443:9443 \  --name=portainer --restart=always \  -v /var/run/docker.sock:/var/run/docker.sock \  -v portainer_data:/data \  cr.portainer.io/portainer/portainer-ce:latest #for docker ee sudo docker pull cr.portainer.io/portainer/portainer-ee:latest sudo docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ee:latest ">
 <meta name=twitter:card content="summary">
 <meta name=twitter:site content="@gohugoio">
-<meta name=twitter:title content="Block .DS_Store Files on NAS">
-<meta name=twitter:description content="Intro MacOS always write DS_Store files on network share. These files are used by MacOS to store custom attributes but it is useless on non MacOS. So, it is better to clean up these existing DS_Store files and block these files on NAS permanently (Synology).
-Clean existing .DS_Store files  Enable SSH and login to NAS find / -name &amp;quot;.DS_Store&amp;quot; -delete  Set VETO files to block .DS_Store on NAS  Go to &amp;ldquo;Control Panel&amp;rdquo; -&amp;gt; &amp;ldquo;File Services&amp;rdquo; -&amp;gt; &amp;ldquo;Advanced Settings&amp;rdquo; Check Veto files Input &amp;ldquo;/.">
+<meta name=twitter:title content="Docker Update Container">
+<meta name=twitter:description content="Upgrade container cmd use portainer as example
+sudo docker stop portainer sudo docker rm portainer #for docker ce sudo docker pull cr.portainer.io/portainer/portainer-ce:latest sudo docker run -d -p 8000:8000 -p 9000:9000 -p 9443:9443 \  --name=portainer --restart=always \  -v /var/run/docker.sock:/var/run/docker.sock \  -v portainer_data:/data \  cr.portainer.io/portainer/portainer-ce:latest #for docker ee sudo docker pull cr.portainer.io/portainer/portainer-ee:latest sudo docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ee:latest ">
 <meta name=twitter:image content="/images/avatar.png">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Block .DS_Store Files on NAS">
-<meta property="og:description" content="Intro MacOS always write DS_Store files on network share. These files are used by MacOS to store custom attributes but it is useless on non MacOS. So, it is better to clean up these existing DS_Store files and block these files on NAS permanently (Synology).
-Clean existing .DS_Store files  Enable SSH and login to NAS find / -name &amp;quot;.DS_Store&amp;quot; -delete  Set VETO files to block .DS_Store on NAS  Go to &amp;ldquo;Control Panel&amp;rdquo; -&amp;gt; &amp;ldquo;File Services&amp;rdquo; -&amp;gt; &amp;ldquo;Advanced Settings&amp;rdquo; Check Veto files Input &amp;ldquo;/.">
-<meta property="og:url" content="https://silvesterpang.github.io/post/block-ds-store-on-nas/">
+<meta property="og:title" content="Docker Update Container">
+<meta property="og:description" content="Upgrade container cmd use portainer as example
+sudo docker stop portainer sudo docker rm portainer #for docker ce sudo docker pull cr.portainer.io/portainer/portainer-ce:latest sudo docker run -d -p 8000:8000 -p 9000:9000 -p 9443:9443 \  --name=portainer --restart=always \  -v /var/run/docker.sock:/var/run/docker.sock \  -v portainer_data:/data \  cr.portainer.io/portainer/portainer-ce:latest #for docker ee sudo docker pull cr.portainer.io/portainer/portainer-ee:latest sudo docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ee:latest ">
+<meta property="og:url" content="https://silvesterpang.github.io/post/docker-update-container/">
 <meta property="og:image" content="/images/avatar.png">
 <meta name=generator content="Hugo 0.92.2">
-<link rel=canonical href=https://silvesterpang.github.io/post/block-ds-store-on-nas/>
+<link rel=canonical href=https://silvesterpang.github.io/post/docker-update-container/>
 <meta name=renderer content="webkit">
 <meta name=viewport content="width=device-width,initial-scale=1">
 <meta name=format-detection content="telephone=no,email=no,adress=no">
@@ -85,35 +85,32 @@ is-active">
 </header>
 <section class="main post-detail">
 <header class=post-header>
-<h1 class=post-title>Block .DS_Store Files on NAS</h1>
-<p class=post-meta>@Fox · Aug 30, 2020 · 1 min read</p>
+<h1 class=post-title>Docker Update Container</h1>
+<p class=post-meta>@Fox · Feb 25, 2022 · 1 min read</p>
 </header>
-<article class=post-content><h1 id=intro>Intro</h1>
-<p>MacOS always write DS_Store files on network share. These files are used by MacOS to store custom attributes but it is useless on non MacOS. So, it is better to clean up these existing DS_Store files and block these files on NAS permanently (Synology).</p>
-<h1 id=clean-existing-ds_store-files>Clean existing .DS_Store files</h1>
-<ol>
-<li>Enable SSH and login to NAS</li>
-<li><code>find / -name ".DS_Store" -delete</code></li>
-</ol>
-<h1 id=set-veto-files-to-block-ds_store-on-nas>Set VETO files to block .DS_Store on NAS</h1>
-<ol>
-<li>Go to &ldquo;Control Panel&rdquo; -> &ldquo;File Services&rdquo; -> &ldquo;Advanced Settings&rdquo;</li>
-<li>Check Veto files</li>
-<li>Input &ldquo;/.DS_Store/</li>
-<li>Apply</li>
-</ol>
-<h1 id=disable-mac-to-write-ds_store-on-network-share>Disable Mac to write DS_Store on network share</h1>
-<ol>
-<li>Open terminals</li>
-<li><code>defaults write com.apple.desktopservices DSDontWriteNetworkStores true</code></li>
-</ol>
-</article>
+<article class=post-content><h1 id=upgrade-container-cmd>Upgrade container cmd</h1>
+<p>use portainer as example</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>sudo docker stop portainer
+sudo docker rm portainer
+
+<span style=color:#75715e>#for docker ce</span>
+sudo docker pull cr.portainer.io/portainer/portainer-ce:latest
+sudo docker run -d -p 8000:8000 -p 9000:9000 -p 9443:9443 <span style=color:#ae81ff>\
+</span><span style=color:#ae81ff></span>    --name<span style=color:#f92672>=</span>portainer --restart<span style=color:#f92672>=</span>always <span style=color:#ae81ff>\
+</span><span style=color:#ae81ff></span>    -v /var/run/docker.sock:/var/run/docker.sock <span style=color:#ae81ff>\
+</span><span style=color:#ae81ff></span>    -v portainer_data:/data <span style=color:#ae81ff>\
+</span><span style=color:#ae81ff></span>    cr.portainer.io/portainer/portainer-ce:latest
+
+<span style=color:#75715e>#for docker ee</span>
+sudo docker pull cr.portainer.io/portainer/portainer-ee:latest
+sudo docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart<span style=color:#f92672>=</span>always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ee:latest
+</code></pre></div></article>
 <footer class=post-footer>
 <ul class=post-tags>
-<li><a href=/tags/synology><span class=tag>Synology</span></a></li>
+<li><a href=/tags/docker><span class=tag>Docker</span></a></li>
+<li><a href=/tags/portainer><span class=tag>Portainer</span></a></li>
 </ul>
 <p class=post-copyright>
-This post was published <strong>543</strong> days ago, content in the post may be inaccurate, even wrong now, please take risk yourself.
 </p>
 </footer>
 </section>

@@ -82,6 +82,17 @@
 </header>
 <article class=post-entry>
 <header class=post-header>
+<h3 class=post-title><a href=https://silvesterpang.github.io/post/docker-update-container/ class=post-link>Docker Update Container</a></h3>
+<p class=post-meta>@Fox · Feb 25, 2022 · 1 min read</p>
+</header>
+<p class=post-summary>Upgrade container cmd use portainer as example
+sudo docker stop portainer sudo docker rm portainer #for docker ce sudo docker pull cr.portainer.io/portainer/portainer-ce:latest sudo docker run -d -p 8000:8000 -p 9000:9000 -p 9443:9443 \ --name=portainer --restart=always \ -v /var/run/docker.sock:/var/run/docker.sock \ -v portainer_data:/data \ cr.portainer.io/portainer/portainer-ce:latest #for docker ee sudo docker pull cr.portainer.io/portainer/portainer-ee:latest sudo docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ee:latest </p>
+<footer class=post-footer>
+<a class=read-more href=https://silvesterpang.github.io/post/docker-update-container/>Read More →</a>
+</footer>
+</article>
+<article class=post-entry>
+<header class=post-header>
 <h3 class=post-title><a href=https://silvesterpang.github.io/post/hugo-quick-ref/ class=post-link>Hugo Quick Ref</a></h3>
 <p class=post-meta>@Fox · Feb 24, 2022 · 1 min read</p>
 </header>
