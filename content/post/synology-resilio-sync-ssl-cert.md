@@ -16,7 +16,7 @@ Download related package in Resilio Sync website and install the software
     `/usr/local/resiliosync/var/sync.conf`
 1. add `ssl_certificate` and `ssl_private_key` fields after `force_http`
     
-    ```
+    ```json
     "force_https": true,
     "ssl_certificate": "/path/to/cert.pem",
     "ssl_private_key": "/path/to/privkey.pem",
