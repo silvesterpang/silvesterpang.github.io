@@ -4,5 +4,5 @@ Install Resilio Sync Download related package in Resilio Sync website and instal
 Configure SSL Cert ssh to synology
 edit the configure file /usr/local/resiliosync/var/sync.conf
 add ssl_certificate and ssl_private_key fields after force_http
-&amp;quot;force_https&amp;quot;: true, &amp;quot;ssl_certificate&amp;quot;: &amp;quot;/path/to/cert.pem&amp;quot;, &amp;quot;ssl_private_key&amp;quot;: &amp;quot;/path/to/privkey.pem&amp;quot;, restart resilio sync
+&amp;#34;force_https&amp;#34;: true, &amp;#34;ssl_certificate&amp;#34;: &amp;#34;/path/to/cert.pem&amp;#34;, &amp;#34;ssl_private_key&amp;#34;: &amp;#34;/path/to/privkey.pem&amp;#34;, restart resilio sync
 in vi, dd to delete line double check the permission and the path if fail</description></item></channel></rss>
