@@ -2,7 +2,7 @@ baseURL = 'https://silvesterpang.github.io/'
 languageCode = 'en-us'
 title = "A Fox's Notes"
 enableRobotsTXT = false
-theme = "hugo-nuo"
+theme = "PaperMod"
 #disqusShortname = "fox"
 
 [permalinks]
