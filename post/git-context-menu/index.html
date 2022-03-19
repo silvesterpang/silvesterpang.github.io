@@ -1,163 +1,38 @@
-<!doctype html><html lang=en-us>
-<head>
-<meta charset=utf-8>
-<title>Git Context Menu</title>
-<link href=//cdn.jsdelivr.net rel=dns-prefetch>
-<link href=//cdnjs.cloudflare.com rel=dns-prefetch>
-<link href=//at.alicdn.com rel=dns-prefetch>
-<link href=//fonts.googleapis.com rel=dns-prefetch>
-<link href=//fonts.gstatic.com rel=dns-prefetch>
-<meta name=description content="Git Context Menu If install git via scoop, the &amp;ldquo;Open Bash Here&amp;rdquo; option is missing in right click menu. The below registry script is to add back the missing option
-Windows Registry Editor Version 5.00 [HKEY_CLASSES_ROOT\*\shell\Open Git Bash] @=&amp;#34;Open Git Bash&amp;#34; &amp;#34;Icon&amp;#34;=&amp;#34;C:\\scoop_folder\\scoop\\apps\\git\\current\\git-bash.exe&amp;#34; [HKEY_CLASSES_ROOT\*\shell\Open Git Bash\command] @=&amp;#34;\&amp;#34;C:\\scoop_folder\\scoop\\apps\\git\\current\\git-bash.exe\&amp;#34; \&amp;#34;--cd=%1\&amp;#34;&amp;#34; ; This will make it appear when you right click ON a folder ; The &amp;#34;Icon&amp;#34; line can be removed if you don&amp;#39;t want the icon to appear [HKEY_CLASSES_ROOT\Directory\shell\bash] @=&amp;#34;Open Git Bash&amp;#34; &amp;#34;Icon&amp;#34;=&amp;#34;C:\\scoop_folder\\scoop\\apps\\git\\current\\git-bash.">
-<meta name=twitter:card content="summary">
-<meta name=twitter:site content="@gohugoio">
-<meta name=twitter:title content="Git Context Menu">
-<meta name=twitter:description content="Git Context Menu If install git via scoop, the &amp;ldquo;Open Bash Here&amp;rdquo; option is missing in right click menu. The below registry script is to add back the missing option
-Windows Registry Editor Version 5.00 [HKEY_CLASSES_ROOT\*\shell\Open Git Bash] @=&amp;#34;Open Git Bash&amp;#34; &amp;#34;Icon&amp;#34;=&amp;#34;C:\\scoop_folder\\scoop\\apps\\git\\current\\git-bash.exe&amp;#34; [HKEY_CLASSES_ROOT\*\shell\Open Git Bash\command] @=&amp;#34;\&amp;#34;C:\\scoop_folder\\scoop\\apps\\git\\current\\git-bash.exe\&amp;#34; \&amp;#34;--cd=%1\&amp;#34;&amp;#34; ; This will make it appear when you right click ON a folder ; The &amp;#34;Icon&amp;#34; line can be removed if you don&amp;#39;t want the icon to appear [HKEY_CLASSES_ROOT\Directory\shell\bash] @=&amp;#34;Open Git Bash&amp;#34; &amp;#34;Icon&amp;#34;=&amp;#34;C:\\scoop_folder\\scoop\\apps\\git\\current\\git-bash.">
-<meta name=twitter:image content="/images/avatar.png">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Git Context Menu">
-<meta property="og:description" content="Git Context Menu If install git via scoop, the &amp;ldquo;Open Bash Here&amp;rdquo; option is missing in right click menu. The below registry script is to add back the missing option
-Windows Registry Editor Version 5.00 [HKEY_CLASSES_ROOT\*\shell\Open Git Bash] @=&amp;#34;Open Git Bash&amp;#34; &amp;#34;Icon&amp;#34;=&amp;#34;C:\\scoop_folder\\scoop\\apps\\git\\current\\git-bash.exe&amp;#34; [HKEY_CLASSES_ROOT\*\shell\Open Git Bash\command] @=&amp;#34;\&amp;#34;C:\\scoop_folder\\scoop\\apps\\git\\current\\git-bash.exe\&amp;#34; \&amp;#34;--cd=%1\&amp;#34;&amp;#34; ; This will make it appear when you right click ON a folder ; The &amp;#34;Icon&amp;#34; line can be removed if you don&amp;#39;t want the icon to appear [HKEY_CLASSES_ROOT\Directory\shell\bash] @=&amp;#34;Open Git Bash&amp;#34; &amp;#34;Icon&amp;#34;=&amp;#34;C:\\scoop_folder\\scoop\\apps\\git\\current\\git-bash.">
-<meta property="og:url" content="https://silvesterpang.github.io/post/git-context-menu/">
-<meta property="og:image" content="/images/avatar.png">
-<meta name=generator content="Hugo 0.92.2">
-<link rel=canonical href=https://silvesterpang.github.io/post/git-context-menu/>
-<meta name=renderer content="webkit">
-<meta name=viewport content="width=device-width,initial-scale=1">
-<meta name=format-detection content="telephone=no,email=no,adress=no">
-<meta http-equiv=cache-control content="no-transform">
-<meta name=robots content="index,follow">
-<meta name=referrer content="origin-when-cross-origin">
-<meta name=theme-color content="#02b875">
-<meta name=apple-mobile-web-app-capable content="yes">
-<meta name=apple-mobile-web-app-status-bar-style content="black">
-<meta name=apple-mobile-web-app-title content="A Fox's Notes">
-<meta name=msapplication-tooltip content="A Fox's Notes">
-<meta name=msapplication-navbutton-color content="#02b875">
-<meta name=msapplication-TileColor content="#02b875">
-<meta name=msapplication-TileImage content="/icons/icon-144x144.png">
-<link rel=icon href=/favicon.ico>
-<link rel=icon type=image/png sizes=16x16 href=/icons/icon-16x16.png>
-<link rel=icon type=image/png sizes=32x32 href=/icons/icon-32x32.png>
-<link rel=icon sizes=192x192 href=/icons/icon-192x192.png>
-<link rel=apple-touch-icon href=/icons/icon-152x152.png>
-<link rel=manifest href=/manifest.json>
-<link rel=preload href=/styles/main-rendered.min.css as=style>
-<link rel=preload href="https://fonts.googleapis.com/css?family=Lobster" as=style>
-<link rel=preload href=/images/avatar.png as=image>
-<link rel=preload href=/images/grey-prism.svg as=image>
-<style>body{background:#f4f3f1 url(/images/grey-prism.svg)repeat fixed}</style>
-<link rel=stylesheet href=/styles/main-rendered.min.css>
-<link rel=stylesheet href="https://fonts.googleapis.com/css?family=Lobster">
-<script src=https://cdn.jsdelivr.net/npm/medium-zoom@1.0.2/dist/medium-zoom.min.js></script>
-<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/video.js@7.3.0/dist/video-js.min.css><!--[if lte IE 8]><script src=https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js></script>
-<script src=https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js></script>
-<script src=https://cdn.jsdelivr.net/npm/videojs-ie8@1.1.2/dist/videojs-ie8.min.js></script><![endif]--><!--[if lte IE 9]><script src=https://cdn.jsdelivr.net/npm/eligrey-classlist-js-polyfill@1.2.20180112/classList.min.js></script><![endif]-->
-</head>
-<body>
-<div class=suspension>
-<a role=button aria-label="Go to top" title="Go to top" class="to-top is-hide"><span class="icon icon-up" aria-hidden=true></span></a>
-</div>
-<header class=site-header>
-<a href=https://silvesterpang.github.io/><img class=avatar src=/images/avatar.png alt=Avatar></a>
-<h2 class=title><a href=https://silvesterpang.github.io/>A Fox's Notes</a></h2>
-<p class=subtitle></p>
-<button class=menu-toggle type=button aria-label="Main Menu" aria-expanded=false tab-index=0>
-<span class="icon icon-menu" aria-hidden=true></span>
-</button>
-<nav class="site-menu collapsed">
-<h2 class=offscreen>Main Menu</h2>
-<ul class=menu-list>
-<li class="menu-item
-is-active">
-<a href=/>Home</a>
-</li>
-<li class=menu-item>
-<a href=/tags/>Tags</a>
-</li>
-</ul>
-</nav>
-<nav class="social-menu collapsed">
-<h2 class=offscreen>Social Networks</h2>
-<ul class=social-list></ul>
-</nav>
-</header>
-<section class="main post-detail">
-<header class=post-header>
-<h1 class=post-title>Git Context Menu</h1>
-<p class=post-meta>@Fox · Mar 3, 2022 · 1 min read</p>
-</header>
-<article class=post-content><h1 id=git-context-menu>Git Context Menu</h1>
-<p>If install git via scoop, the &ldquo;Open Bash Here&rdquo; option is missing in right click menu. The below registry script is to add back the missing option</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bat data-lang=bat>Windows Registry Editor Version 5.00
-
-[HKEY_CLASSES_ROOT\*\shell\Open Git Bash]
-@=<span style=color:#e6db74>&#34;Open Git Bash&#34;</span>
-<span style=color:#e6db74>&#34;Icon&#34;</span>=<span style=color:#e6db74>&#34;C:\\scoop_folder\\scoop\\apps\\git\\current\\git-bash.exe&#34;</span>
-
-[HKEY_CLASSES_ROOT\*\shell\Open Git Bash\command]
-@=<span style=color:#e6db74>&#34;\&#34;</span>C:\\scoop_folder\\scoop\\apps\\git\\current\\git-bash.exe\<span style=color:#e6db74>&#34; \&#34;</span>--cd=%1\<span style=color:#e6db74>&#34;&#34;</span>
-
-; This will make it appear when you right click ON a folder
-; The <span style=color:#e6db74>&#34;Icon&#34;</span> line can be removed if you don&#39;t want the icon to appear
-
-[HKEY_CLASSES_ROOT\Directory\shell\bash]
-@=<span style=color:#e6db74>&#34;Open Git Bash&#34;</span>
-<span style=color:#e6db74>&#34;Icon&#34;</span>=<span style=color:#e6db74>&#34;C:\\scoop_folder\\scoop\\apps\\git\\current\\git-bash.exe&#34;</span>
-
-
-[HKEY_CLASSES_ROOT\Directory\shell\bash\command]
-@=<span style=color:#e6db74>&#34;\&#34;</span>C:\\scoop_folder\\scoop\\apps\\git\\current\\git-bash.exe\<span style=color:#e6db74>&#34; \&#34;</span>--cd=%1\<span style=color:#e6db74>&#34;&#34;</span>
-
-; This will make it appear when you right click INSIDE a folder
-; The <span style=color:#e6db74>&#34;Icon&#34;</span> line can be removed if you don&#39;t want the icon to appear
-
-[HKEY_CLASSES_ROOT\Directory\Background\shell\bash]
-@=<span style=color:#e6db74>&#34;Open Git Bash&#34;</span>
-<span style=color:#e6db74>&#34;Icon&#34;</span>=<span style=color:#e6db74>&#34;C:\\scoop_folder\\scoop\\apps\\git\\current\\git-bash.exe&#34;</span>
-
-[HKEY_CLASSES_ROOT\Directory\Background\shell\bash\command]
-@=<span style=color:#e6db74>&#34;\&#34;</span>C:\\scoop_folder\\scoop\\apps\\git\\current\\git-bash.exe\<span style=color:#e6db74>&#34; \&#34;</span>--cd=%v.\<span style=color:#e6db74>&#34;&#34;</span>
-</code></pre></div></article>
-<footer class=post-footer>
-<ul class=post-tags>
-<li><a href=/tags/windows><span class=tag>Windows</span></a></li>
-<li><a href=/tags/git><span class=tag>Git</span></a></li>
-</ul>
-<p class=post-copyright>
-</p>
-</footer>
-</section>
-<footer class=site-footer>
-<p>© 2017-2022 A Fox's Notes</p>
-<p>Powered by <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> with theme <a href=https://github.com/laozhu/hugo-nuo target=_blank rel=noopener>Nuo</a>.</p>
-</footer>
-<script src=https://cdn.jsdelivr.net/npm/smooth-scroll@15.0.0/dist/smooth-scroll.min.js></script>
-<script async src=https://cdn.jsdelivr.net/npm/video.js@7.3.0/dist/video.min.js></script>
-<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-<script type=text/x-mathjax-config>
-  MathJax.Hub.Config({
-    tex2jax: {
-      inlineMath: [['$','$'], ['\\(','\\)']],
-      displayMath: [['$$','$$'], ['\\[','\\]']],
-      processEscapes: true,
-      processEnvironments: true,
-      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
-      TeX: { equationNumbers: { autoNumber: "AMS" },
-      extensions: ["AMSmath.js", "AMSsymbols.js"] }
-    },
-  });
-</script>
-<script type=text/x-mathjax-config>
-  // Fix <code> tags after MathJax finishes running. This is a
-  // hack to overcome a shortcoming of Markdown. Discussion at
-  // https://github.com/mojombo/jekyll/issues/199
-  MathJax.Hub.Queue(() => {
-    MathJax.Hub.getAllJax().map(v => v.SourceElement().parentNode.className += ' has-jax');
-  });
-</script>
-<script src=/scripts/index.min.js></script>
-<script>'serviceWorker'in navigator&&navigator.serviceWorker.register('/service-worker.js').then(function(){console.log('[ServiceWorker] Registered')})</script>
-</body>
-</html>
+<!doctype html><html lang=en dir=auto><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>Git Context Menu | A Fox's Notes</title><meta name=keywords content="windows,git"><meta name=description content="Git Context Menu If install git via scoop, the &ldquo;Open Bash Here&rdquo; option is missing in right click menu. The below registry script is to add back the missing option
+Windows Registry Editor Version 5.00  [HKEY_CLASSES_ROOT\*\shell\Open Git Bash] @=&#34;Open Git Bash&#34; &#34;Icon&#34;=&#34;C:\\scoop_folder\\scoop\\apps\\git\\current\\git-bash.exe&#34;  [HKEY_CLASSES_ROOT\*\shell\Open Git Bash\command] @=&#34;\&#34;C:\\scoop_folder\\scoop\\apps\\git\\current\\git-bash.exe\&#34; \&#34;--cd=%1\&#34;&#34;  ; This will make it appear when you right click ON a folder ; The &#34;Icon&#34; line can be removed if you don't want the icon to appear  [HKEY_CLASSES_ROOT\Directory\shell\bash] @=&#34;Open Git Bash&#34; &#34;Icon&#34;=&#34;C:\\scoop_folder\\scoop\\apps\\git\\current\\git-bash."><meta name=author content="Fox"><link rel=canonical href=https://silvesterpang.github.io/post/git-context-menu/><link crossorigin=anonymous href=/assets/css/stylesheet.min.48a18943c2fc15c38a372b8dde1f5e5dc0bc64fa6cb90f5a817d2f8c76b7f3ae.css integrity="sha256-SKGJQ8L8FcOKNyuN3h9eXcC8ZPpsuQ9agX0vjHa3864=" rel="preload stylesheet" as=style><script defer crossorigin=anonymous src=/assets/js/highlight.min.4dcb3c4f38462f66c6b6137227726f5543cb934cca9788f041c087e374491df2.js integrity="sha256-Tcs8TzhGL2bGthNyJ3JvVUPLk0zKl4jwQcCH43RJHfI=" onload=hljs.initHighlightingOnLoad()></script>
+<link rel=icon href=https://silvesterpang.github.io/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://silvesterpang.github.io/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://silvesterpang.github.io/favicon-32x32.png><link rel=apple-touch-icon href=https://silvesterpang.github.io/apple-touch-icon.png><link rel=mask-icon href=https://silvesterpang.github.io/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><noscript><style>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--hljs-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51)}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style></noscript><meta property="og:title" content="Git Context Menu"><meta property="og:description" content="Git Context Menu If install git via scoop, the &ldquo;Open Bash Here&rdquo; option is missing in right click menu. The below registry script is to add back the missing option
+Windows Registry Editor Version 5.00  [HKEY_CLASSES_ROOT\*\shell\Open Git Bash] @=&#34;Open Git Bash&#34; &#34;Icon&#34;=&#34;C:\\scoop_folder\\scoop\\apps\\git\\current\\git-bash.exe&#34;  [HKEY_CLASSES_ROOT\*\shell\Open Git Bash\command] @=&#34;\&#34;C:\\scoop_folder\\scoop\\apps\\git\\current\\git-bash.exe\&#34; \&#34;--cd=%1\&#34;&#34;  ; This will make it appear when you right click ON a folder ; The &#34;Icon&#34; line can be removed if you don't want the icon to appear  [HKEY_CLASSES_ROOT\Directory\shell\bash] @=&#34;Open Git Bash&#34; &#34;Icon&#34;=&#34;C:\\scoop_folder\\scoop\\apps\\git\\current\\git-bash."><meta property="og:type" content="article"><meta property="og:url" content="https://silvesterpang.github.io/post/git-context-menu/"><meta property="article:section" content="post"><meta property="article:published_time" content="2022-03-03T19:49:09+08:00"><meta property="article:modified_time" content="2022-03-03T19:49:09+08:00"><meta name=twitter:card content="summary"><meta name=twitter:title content="Git Context Menu"><meta name=twitter:description content="Git Context Menu If install git via scoop, the &ldquo;Open Bash Here&rdquo; option is missing in right click menu. The below registry script is to add back the missing option
+Windows Registry Editor Version 5.00  [HKEY_CLASSES_ROOT\*\shell\Open Git Bash] @=&#34;Open Git Bash&#34; &#34;Icon&#34;=&#34;C:\\scoop_folder\\scoop\\apps\\git\\current\\git-bash.exe&#34;  [HKEY_CLASSES_ROOT\*\shell\Open Git Bash\command] @=&#34;\&#34;C:\\scoop_folder\\scoop\\apps\\git\\current\\git-bash.exe\&#34; \&#34;--cd=%1\&#34;&#34;  ; This will make it appear when you right click ON a folder ; The &#34;Icon&#34; line can be removed if you don't want the icon to appear  [HKEY_CLASSES_ROOT\Directory\shell\bash] @=&#34;Open Git Bash&#34; &#34;Icon&#34;=&#34;C:\\scoop_folder\\scoop\\apps\\git\\current\\git-bash."><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://silvesterpang.github.io/post/"},{"@type":"ListItem","position":2,"name":"Git Context Menu","item":"https://silvesterpang.github.io/post/git-context-menu/"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Git Context Menu","name":"Git Context Menu","description":"Git Context Menu If install git via scoop, the \u0026ldquo;Open Bash Here\u0026rdquo; option is missing in right click menu. The below registry script is to add back the missing option\nWindows Registry Editor Version 5.00  [HKEY_CLASSES_ROOT\\*\\shell\\Open Git Bash] @=\u0026#34;Open Git Bash\u0026#34; \u0026#34;Icon\u0026#34;=\u0026#34;C:\\\\scoop_folder\\\\scoop\\\\apps\\\\git\\\\current\\\\git-bash.exe\u0026#34;  [HKEY_CLASSES_ROOT\\*\\shell\\Open Git Bash\\command] @=\u0026#34;\\\u0026#34;C:\\\\scoop_folder\\\\scoop\\\\apps\\\\git\\\\current\\\\git-bash.exe\\\u0026#34; \\\u0026#34;--cd=%1\\\u0026#34;\u0026#34;  ; This will make it appear when you right click ON a folder ; The \u0026#34;Icon\u0026#34; line can be removed if you don\u0026#39;t want the icon to appear  [HKEY_CLASSES_ROOT\\Directory\\shell\\bash] @=\u0026#34;Open Git Bash\u0026#34; \u0026#34;Icon\u0026#34;=\u0026#34;C:\\\\scoop_folder\\\\scoop\\\\apps\\\\git\\\\current\\\\git-bash.","keywords":["windows","git"],"articleBody":"Git Context Menu If install git via scoop, the “Open Bash Here” option is missing in right click menu. The below registry script is to add back the missing option\nWindows Registry Editor Version 5.00  [HKEY_CLASSES_ROOT\\*\\shell\\Open Git Bash] @=\"Open Git Bash\" \"Icon\"=\"C:\\\\scoop_folder\\\\scoop\\\\apps\\\\git\\\\current\\\\git-bash.exe\"  [HKEY_CLASSES_ROOT\\*\\shell\\Open Git Bash\\command] @=\"\\\"C:\\\\scoop_folder\\\\scoop\\\\apps\\\\git\\\\current\\\\git-bash.exe\\\" \\\"--cd=%1\\\"\"  ; This will make it appear when you right click ON a folder ; The \"Icon\" line can be removed if you don't want the icon to appear  [HKEY_CLASSES_ROOT\\Directory\\shell\\bash] @=\"Open Git Bash\" \"Icon\"=\"C:\\\\scoop_folder\\\\scoop\\\\apps\\\\git\\\\current\\\\git-bash.exe\"   [HKEY_CLASSES_ROOT\\Directory\\shell\\bash\\command] @=\"\\\"C:\\\\scoop_folder\\\\scoop\\\\apps\\\\git\\\\current\\\\git-bash.exe\\\" \\\"--cd=%1\\\"\"  ; This will make it appear when you right click INSIDE a folder ; The \"Icon\" line can be removed if you don't want the icon to appear  [HKEY_CLASSES_ROOT\\Directory\\Background\\shell\\bash] @=\"Open Git Bash\" \"Icon\"=\"C:\\\\scoop_folder\\\\scoop\\\\apps\\\\git\\\\current\\\\git-bash.exe\"  [HKEY_CLASSES_ROOT\\Directory\\Background\\shell\\bash\\command] @=\"\\\"C:\\\\scoop_folder\\\\scoop\\\\apps\\\\git\\\\current\\\\git-bash.exe\\\" \\\"--cd=%v.\\\"\" ","wordCount":"119","inLanguage":"en","datePublished":"2022-03-03T19:49:09+08:00","dateModified":"2022-03-03T19:49:09+08:00","author":{"@type":"Person","name":"Fox"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://silvesterpang.github.io/post/git-context-menu/"},"publisher":{"@type":"Organization","name":"A Fox's Notes","logo":{"@type":"ImageObject","url":"https://silvesterpang.github.io/favicon.ico"}}}</script></head><body id=top><script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add("dark"):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove("dark"):window.matchMedia("(prefers-color-scheme: dark)").matches&&document.body.classList.add("dark")</script><header class=header><nav class=nav><div class=logo><a href=https://silvesterpang.github.io/ accesskey=h title="A Fox's Notes (Alt + H)">A Fox's Notes</a>
+<span class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)"><svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></span></div><ul id=menu><li><a href=https://silvesterpang.github.io/ title=Home><span>Home</span></a></li><li><a href=https://silvesterpang.github.io/tags/ title=Tags><span>Tags</span></a></li></ul></nav></header><main class=main><article class=post-single><header class=post-header><h1 class=post-title>Git Context Menu</h1><div class=post-meta><span title="2022-03-03 19:49:09 +0800 +0800">March 3, 2022</span>&nbsp;·&nbsp;Fox</div></header><div class=post-content><h1 id=git-context-menu>Git Context Menu<a hidden class=anchor aria-hidden=true href=#git-context-menu>#</a></h1><p>If install git via scoop, the &ldquo;Open Bash Here&rdquo; option is missing in right click menu. The below registry script is to add back the missing option</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bat data-lang=bat><span style=display:flex><span>Windows Registry Editor Version 5.00
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>[HKEY_CLASSES_ROOT\*\shell\Open Git Bash]
+</span></span><span style=display:flex><span>@=<span style=color:#e6db74>&#34;Open Git Bash&#34;</span>
+</span></span><span style=display:flex><span><span style=color:#e6db74>&#34;Icon&#34;</span>=<span style=color:#e6db74>&#34;C:\\scoop_folder\\scoop\\apps\\git\\current\\git-bash.exe&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>[HKEY_CLASSES_ROOT\*\shell\Open Git Bash\command]
+</span></span><span style=display:flex><span>@=<span style=color:#e6db74>&#34;\&#34;</span>C:\\scoop_folder\\scoop\\apps\\git\\current\\git-bash.exe\<span style=color:#e6db74>&#34; \&#34;</span>--cd=%1\<span style=color:#e6db74>&#34;&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>; This will make it appear when you right click ON a folder
+</span></span><span style=display:flex><span>; The <span style=color:#e6db74>&#34;Icon&#34;</span> line can be removed if you don&#39;t want the icon to appear
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>[HKEY_CLASSES_ROOT\Directory\shell\bash]
+</span></span><span style=display:flex><span>@=<span style=color:#e6db74>&#34;Open Git Bash&#34;</span>
+</span></span><span style=display:flex><span><span style=color:#e6db74>&#34;Icon&#34;</span>=<span style=color:#e6db74>&#34;C:\\scoop_folder\\scoop\\apps\\git\\current\\git-bash.exe&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>[HKEY_CLASSES_ROOT\Directory\shell\bash\command]
+</span></span><span style=display:flex><span>@=<span style=color:#e6db74>&#34;\&#34;</span>C:\\scoop_folder\\scoop\\apps\\git\\current\\git-bash.exe\<span style=color:#e6db74>&#34; \&#34;</span>--cd=%1\<span style=color:#e6db74>&#34;&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>; This will make it appear when you right click INSIDE a folder
+</span></span><span style=display:flex><span>; The <span style=color:#e6db74>&#34;Icon&#34;</span> line can be removed if you don&#39;t want the icon to appear
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>[HKEY_CLASSES_ROOT\Directory\Background\shell\bash]
+</span></span><span style=display:flex><span>@=<span style=color:#e6db74>&#34;Open Git Bash&#34;</span>
+</span></span><span style=display:flex><span><span style=color:#e6db74>&#34;Icon&#34;</span>=<span style=color:#e6db74>&#34;C:\\scoop_folder\\scoop\\apps\\git\\current\\git-bash.exe&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>[HKEY_CLASSES_ROOT\Directory\Background\shell\bash\command]
+</span></span><span style=display:flex><span>@=<span style=color:#e6db74>&#34;\&#34;</span>C:\\scoop_folder\\scoop\\apps\\git\\current\\git-bash.exe\<span style=color:#e6db74>&#34; \&#34;</span>--cd=%v.\<span style=color:#e6db74>&#34;&#34;</span>
+</span></span></code></pre></div></div><footer class=post-footer><ul class=post-tags><li><a href=https://silvesterpang.github.io/tags/windows/>windows</a></li><li><a href=https://silvesterpang.github.io/tags/git/>git</a></li></ul></footer></article></main><footer class=footer><span>&copy; 2022 <a href=https://silvesterpang.github.io/>A Fox's Notes</a></span>
+<span>Powered by
+<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
+        <a href=https://git.io/hugopapermod rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg></a><script>let menu=document.getElementById("menu");menu&&(menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}),document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(t){t.preventDefault();var e=this.getAttribute("href").substr(1);window.matchMedia("(prefers-reduced-motion: reduce)").matches?document.querySelector(`[id='${decodeURIComponent(e)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(e)}']`).scrollIntoView({behavior:"smooth"}),e==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${e}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove("dark"),localStorage.setItem("pref-theme","light")):(document.body.classList.add("dark"),localStorage.setItem("pref-theme","dark"))})</script></body></html>
