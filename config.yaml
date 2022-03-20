@@ -1,8 +1,10 @@
 baseURL: 'https://note.thefoxhut.com/'
-title: "A Fox's Notes"
+title: "A Fox's Notebook"
 languageCode: 'en-us'
 theme: "PaperMod"
 enableRobotsTXT: false
+enableInlineShortcodes: true
+enableEmoji: true
 
 minify:
   disableXML: true
@@ -28,10 +30,10 @@ params:
   ShowCodeCopyButtons: true
 
   homeInfoParams:
-    Title: "A Fox's Notes"
+    Title: "Hi there"
     Content: >
-        A note powered by Hugo and PaperMod theme.
-        
+        Welcome. This is a notebook, powered by Hugo and PaperMod theme.
+
 taxonomies:
   category: categories
   tag: tags
