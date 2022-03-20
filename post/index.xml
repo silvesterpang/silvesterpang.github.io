@@ -1,16 +1,98 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Posts on A Fox's Notes</title><link>https://silvesterpang.github.io/post/</link><description>Recent content in Posts on A Fox's Notes</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 03 Mar 2022 19:49:09 +0800</lastBuildDate><atom:link href="https://silvesterpang.github.io/post/index.xml" rel="self" type="application/rss+xml"/><item><title>Git Context Menu</title><link>https://silvesterpang.github.io/post/git-context-menu/</link><pubDate>Thu, 03 Mar 2022 19:49:09 +0800</pubDate><guid>https://silvesterpang.github.io/post/git-context-menu/</guid><description>Git Context Menu If install git via scoop, the &amp;ldquo;Open Bash Here&amp;rdquo; option is missing in right click menu. The below registry script is to add back the missing option
-Windows Registry Editor Version 5.00 [HKEY_CLASSES_ROOT\*\shell\Open Git Bash] @=&amp;#34;Open Git Bash&amp;#34; &amp;#34;Icon&amp;#34;=&amp;#34;C:\\scoop_folder\\scoop\\apps\\git\\current\\git-bash.exe&amp;#34; [HKEY_CLASSES_ROOT\*\shell\Open Git Bash\command] @=&amp;#34;\&amp;#34;C:\\scoop_folder\\scoop\\apps\\git\\current\\git-bash.exe\&amp;#34; \&amp;#34;--cd=%1\&amp;#34;&amp;#34; ; This will make it appear when you right click ON a folder ; The &amp;#34;Icon&amp;#34; line can be removed if you don&amp;#39;t want the icon to appear [HKEY_CLASSES_ROOT\Directory\shell\bash] @=&amp;#34;Open Git Bash&amp;#34; &amp;#34;Icon&amp;#34;=&amp;#34;C:\\scoop_folder\\scoop\\apps\\git\\current\\git-bash.</description></item><item><title>Docker Update Container</title><link>https://silvesterpang.github.io/post/docker-update-container/</link><pubDate>Fri, 25 Feb 2022 22:16:41 +0800</pubDate><guid>https://silvesterpang.github.io/post/docker-update-container/</guid><description>Upgrade container cmd use portainer as example
-sudo docker stop portainer sudo docker rm portainer #for docker ce sudo docker pull cr.portainer.io/portainer/portainer-ce:latest sudo docker run -d -p 8000:8000 -p 9000:9000 -p 9443:9443 \ --name=portainer --restart=always \ -v /var/run/docker.sock:/var/run/docker.sock \ -v portainer_data:/data \ cr.portainer.io/portainer/portainer-ce:latest #for docker ee sudo docker pull cr.portainer.io/portainer/portainer-ee:latest sudo docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ee:latest</description></item><item><title>Hugo Quick Ref</title><link>https://silvesterpang.github.io/post/hugo-quick-ref/</link><pubDate>Thu, 24 Feb 2022 20:31:07 +0800</pubDate><guid>https://silvesterpang.github.io/post/hugo-quick-ref/</guid><description>Hugo Quick Reference Install Hugo install hugo via chocolate choco install hugo -confirm install Sass/SCSS version choco install hugo-extended -confirm Hugo Cmd new site hugo new site &amp;lt;FolderName&amp;gt; new post hugo new post/hello-world.md preview site hugo server -D build site hugo Reference 如何將hugo部落格部署到github上</description></item><item><title>Git Bash Display TortoiseGitPlink Fatal Error</title><link>https://silvesterpang.github.io/post/git-bash-auth-fatel-error/</link><pubDate>Thu, 01 Oct 2020 20:19:05 +0000</pubDate><guid>https://silvesterpang.github.io/post/git-bash-auth-fatel-error/</guid><description>Intro Git bash display fatal error on clone and push project in bash. However, when trying ssh -T git@githut.com will return access successful, that means the SSH configuration is correct
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Posts on A Fox&#39;s Notes</title>
+    <link>https://note.thefoxhut.com/post/</link>
+    <description>Recent content in Posts on A Fox&#39;s Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 03 Mar 2022 19:49:09 +0800</lastBuildDate><atom:link href="https://note.thefoxhut.com/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Git Context Menu</title>
+      <link>https://note.thefoxhut.com/post/git-context-menu/</link>
+      <pubDate>Thu, 03 Mar 2022 19:49:09 +0800</pubDate>
+      
+      <guid>https://note.thefoxhut.com/post/git-context-menu/</guid>
+      <description>If install git via scoop, the &amp;ldquo;Open Bash Here&amp;rdquo; option is missing in right click menu. The below registry script is to add back the missing option
+Windows Registry Editor Version 5.00  [HKEY_CLASSES_ROOT\*\shell\Open Git Bash] @=&amp;#34;Open Git Bash&amp;#34; &amp;#34;Icon&amp;#34;=&amp;#34;C:\\scoop_folder\\scoop\\apps\\git\\current\\git-bash.exe&amp;#34;  [HKEY_CLASSES_ROOT\*\shell\Open Git Bash\command] @=&amp;#34;\&amp;#34;C:\\scoop_folder\\scoop\\apps\\git\\current\\git-bash.exe\&amp;#34; \&amp;#34;--cd=%1\&amp;#34;&amp;#34;  ; This will make it appear when you right click ON a folder ; The &amp;#34;Icon&amp;#34; line can be removed if you don&amp;#39;t want the icon to appear  [HKEY_CLASSES_ROOT\Directory\shell\bash] @=&amp;#34;Open Git Bash&amp;#34; &amp;#34;Icon&amp;#34;=&amp;#34;C:\\scoop_folder\\scoop\\apps\\git\\current\\git-bash.</description>
+    </item>
+    
+    <item>
+      <title>Docker Update Container</title>
+      <link>https://note.thefoxhut.com/post/docker-update-container/</link>
+      <pubDate>Fri, 25 Feb 2022 22:16:41 +0800</pubDate>
+      
+      <guid>https://note.thefoxhut.com/post/docker-update-container/</guid>
+      <description>Upgrade container cmd use portainer as example
+sudo docker stop portainer sudo docker rm portainer  #for docker ce sudo docker pull cr.portainer.io/portainer/portainer-ce:latest sudo docker run -d -p 8000:8000 -p 9000:9000 -p 9443:9443 \  --name=portainer --restart=always \  -v /var/run/docker.sock:/var/run/docker.sock \  -v portainer_data:/data \  cr.portainer.io/portainer/portainer-ce:latest  #for docker ee sudo docker pull cr.portainer.io/portainer/portainer-ee:latest sudo docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ee:latest </description>
+    </item>
+    
+    <item>
+      <title>Hugo Quick Ref</title>
+      <link>https://note.thefoxhut.com/post/hugo-quick-ref/</link>
+      <pubDate>Thu, 24 Feb 2022 20:31:07 +0800</pubDate>
+      
+      <guid>https://note.thefoxhut.com/post/hugo-quick-ref/</guid>
+      <description>Hugo Quick Reference Install Hugo install hugo via chocolate choco install hugo -confirm install Sass/SCSS version choco install hugo-extended -confirm Hugo Cmd new site hugo new site &amp;lt;FolderName&amp;gt; new post hugo new post/hello-world.md preview site hugo server -D build site hugo Reference 如何將hugo部落格部署到github上</description>
+    </item>
+    
+    <item>
+      <title>Git Bash Display TortoiseGitPlink Fatal Error</title>
+      <link>https://note.thefoxhut.com/post/git-bash-auth-fatel-error/</link>
+      <pubDate>Thu, 01 Oct 2020 20:19:05 +0000</pubDate>
+      
+      <guid>https://note.thefoxhut.com/post/git-bash-auth-fatel-error/</guid>
+      <description>Intro Git bash display fatal error on clone and push project in bash. However, when trying ssh -T git@githut.com will return access successful, that means the SSH configuration is correct
 {% asset_img image1.png This is an image %}
 Solution This is due to the default ssh client is overwritted by tortoisegit. There are two methods to solve
-Method 1 go to tortoisegit -&amp;gt; setting -&amp;gt; network. Change the default ssh client from tortoisegitplink to ssh Method 2 change the enviornment variable GIT_SSH</description></item><item><title>Block .DS_Store Files on NAS</title><link>https://silvesterpang.github.io/post/block-ds-store-on-nas/</link><pubDate>Sun, 30 Aug 2020 21:30:58 +0000</pubDate><guid>https://silvesterpang.github.io/post/block-ds-store-on-nas/</guid><description>Intro MacOS always write DS_Store files on network share. These files are used by MacOS to store custom attributes but it is useless on non MacOS. So, it is better to clean up these existing DS_Store files and block these files on NAS permanently (Synology).
-Clean existing .DS_Store files Enable SSH and login to NAS find / -name &amp;quot;.DS_Store&amp;quot; -delete Set VETO files to block .DS_Store on NAS Go to &amp;ldquo;Control Panel&amp;rdquo; -&amp;gt; &amp;ldquo;File Services&amp;rdquo; -&amp;gt; &amp;ldquo;Advanced Settings&amp;rdquo; Check Veto files Input &amp;ldquo;/.</description></item><item><title>Synology Resilio Sync SSL Cert</title><link>https://silvesterpang.github.io/post/synology-resilio-sync-ssl-cert/</link><pubDate>Thu, 30 Jan 2020 21:05:12 +0000</pubDate><guid>https://silvesterpang.github.io/post/synology-resilio-sync-ssl-cert/</guid><description>Intro Configure the Resilio Sync SSL Cert in Synology
+Method 1  go to tortoisegit -&amp;gt; setting -&amp;gt; network. Change the default ssh client from tortoisegitplink to ssh  Method 2  change the enviornment variable GIT_SSH  </description>
+    </item>
+    
+    <item>
+      <title>Block .DS_Store Files on NAS</title>
+      <link>https://note.thefoxhut.com/post/block-ds-store-on-nas/</link>
+      <pubDate>Sun, 30 Aug 2020 21:30:58 +0000</pubDate>
+      
+      <guid>https://note.thefoxhut.com/post/block-ds-store-on-nas/</guid>
+      <description>Intro MacOS always write DS_Store files on network share. These files are used by MacOS to store custom attributes but it is useless on non MacOS. So, it is better to clean up these existing DS_Store files and block these files on NAS permanently (Synology).
+Clean existing .DS_Store files  Enable SSH and login to NAS find / -name &amp;quot;.DS_Store&amp;quot; -delete  Set VETO files to block .DS_Store on NAS  Go to &amp;ldquo;Control Panel&amp;rdquo; -&amp;gt; &amp;ldquo;File Services&amp;rdquo; -&amp;gt; &amp;ldquo;Advanced Settings&amp;rdquo; Check Veto files Input &amp;ldquo;/.</description>
+    </item>
+    
+    <item>
+      <title>Synology Resilio Sync SSL Cert</title>
+      <link>https://note.thefoxhut.com/post/synology-resilio-sync-ssl-cert/</link>
+      <pubDate>Thu, 30 Jan 2020 21:05:12 +0000</pubDate>
+      
+      <guid>https://note.thefoxhut.com/post/synology-resilio-sync-ssl-cert/</guid>
+      <description>Intro Configure the Resilio Sync SSL Cert in Synology
 Install Resilio Sync Download related package in Resilio Sync website and install the software
-Configure SSL Cert ssh to synology
-edit the configure file /usr/local/resiliosync/var/sync.conf
-add ssl_certificate and ssl_private_key fields after force_http
-&amp;#34;force_https&amp;#34;: true, &amp;#34;ssl_certificate&amp;#34;: &amp;#34;/path/to/cert.pem&amp;#34;, &amp;#34;ssl_private_key&amp;#34;: &amp;#34;/path/to/privkey.pem&amp;#34;, restart resilio sync
-in vi, dd to delete line double check the permission and the path if fail</description></item><item><title>Mac OS Catalina X ZSH Shell</title><link>https://silvesterpang.github.io/post/mac-zsh/</link><pubDate>Tue, 03 Dec 2019 22:02:12 +0000</pubDate><guid>https://silvesterpang.github.io/post/mac-zsh/</guid><description>Intro With Mac OS Catalina, Apple use ZSH as default shell, but it only apply to newly created account. For existing user accounts, it is required to upgrade it manually
+Configure SSL Cert   ssh to synology
+  edit the configure file /usr/local/resiliosync/var/sync.conf
+  add ssl_certificate and ssl_private_key fields after force_http
+&amp;#34;force_https&amp;#34;: true, &amp;#34;ssl_certificate&amp;#34;: &amp;#34;/path/to/cert.pem&amp;#34;, &amp;#34;ssl_private_key&amp;#34;: &amp;#34;/path/to/privkey.pem&amp;#34;,   restart resilio sync
+   in vi, dd to delete line double check the permission and the path if fail  </description>
+    </item>
+    
+    <item>
+      <title>Mac OS Catalina X ZSH Shell</title>
+      <link>https://note.thefoxhut.com/post/mac-zsh/</link>
+      <pubDate>Tue, 03 Dec 2019 22:02:12 +0000</pubDate>
+      
+      <guid>https://note.thefoxhut.com/post/mac-zsh/</guid>
+      <description>Intro With Mac OS Catalina, Apple use ZSH as default shell, but it only apply to newly created account. For existing user accounts, it is required to upgrade it manually
 Change the Default shell to ZSH Execute following command to change the default shell
 chsh -s /bin/zsh Install oh-my-zsh oh-my-zsh is a open source, community-driven framework for managing zsh configuration.
-sh -c &amp;#34;$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)&amp;#34;</description></item><item><title>First Post</title><link>https://silvesterpang.github.io/post/first-post/</link><pubDate>Wed, 03 Oct 2018 21:06:48 +0800</pubDate><guid>https://silvesterpang.github.io/post/first-post/</guid><description>Hello World This is a fox&amp;rsquo;s secret garden where to drop its notes or miscellaneous</description></item></channel></rss>
+sh -c &amp;#34;$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)&amp;#34; </description>
+    </item>
+    
+    <item>
+      <title>First Post</title>
+      <link>https://note.thefoxhut.com/post/first-post/</link>
+      <pubDate>Wed, 03 Oct 2018 21:06:48 +0800</pubDate>
+      
+      <guid>https://note.thefoxhut.com/post/first-post/</guid>
+      <description>Hello World This is a fox&amp;rsquo;s secret garden where to drop its notes or miscellaneous</description>
+    </item>
+    
+  </channel>
+</rss>

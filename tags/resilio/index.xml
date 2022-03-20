@@ -1,7 +1,26 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>resilio on A Fox's Notes</title><link>https://silvesterpang.github.io/tags/resilio/</link><description>Recent content in resilio on A Fox's Notes</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 30 Jan 2020 21:05:12 +0000</lastBuildDate><atom:link href="https://silvesterpang.github.io/tags/resilio/index.xml" rel="self" type="application/rss+xml"/><item><title>Synology Resilio Sync SSL Cert</title><link>https://silvesterpang.github.io/post/synology-resilio-sync-ssl-cert/</link><pubDate>Thu, 30 Jan 2020 21:05:12 +0000</pubDate><guid>https://silvesterpang.github.io/post/synology-resilio-sync-ssl-cert/</guid><description>Intro Configure the Resilio Sync SSL Cert in Synology
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>resilio on A Fox&#39;s Notes</title>
+    <link>https://note.thefoxhut.com/tags/resilio/</link>
+    <description>Recent content in resilio on A Fox&#39;s Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 30 Jan 2020 21:05:12 +0000</lastBuildDate><atom:link href="https://note.thefoxhut.com/tags/resilio/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Synology Resilio Sync SSL Cert</title>
+      <link>https://note.thefoxhut.com/post/synology-resilio-sync-ssl-cert/</link>
+      <pubDate>Thu, 30 Jan 2020 21:05:12 +0000</pubDate>
+      
+      <guid>https://note.thefoxhut.com/post/synology-resilio-sync-ssl-cert/</guid>
+      <description>Intro Configure the Resilio Sync SSL Cert in Synology
 Install Resilio Sync Download related package in Resilio Sync website and install the software
-Configure SSL Cert ssh to synology
-edit the configure file /usr/local/resiliosync/var/sync.conf
-add ssl_certificate and ssl_private_key fields after force_http
-&amp;#34;force_https&amp;#34;: true, &amp;#34;ssl_certificate&amp;#34;: &amp;#34;/path/to/cert.pem&amp;#34;, &amp;#34;ssl_private_key&amp;#34;: &amp;#34;/path/to/privkey.pem&amp;#34;, restart resilio sync
-in vi, dd to delete line double check the permission and the path if fail</description></item></channel></rss>
+Configure SSL Cert   ssh to synology
+  edit the configure file /usr/local/resiliosync/var/sync.conf
+  add ssl_certificate and ssl_private_key fields after force_http
+&amp;#34;force_https&amp;#34;: true, &amp;#34;ssl_certificate&amp;#34;: &amp;#34;/path/to/cert.pem&amp;#34;, &amp;#34;ssl_private_key&amp;#34;: &amp;#34;/path/to/privkey.pem&amp;#34;,   restart resilio sync
+   in vi, dd to delete line double check the permission and the path if fail  </description>
+    </item>
+    
+  </channel>
+</rss>

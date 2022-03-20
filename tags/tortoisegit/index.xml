@@ -1,4 +1,23 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>tortoisegit on A Fox's Notes</title><link>https://silvesterpang.github.io/tags/tortoisegit/</link><description>Recent content in tortoisegit on A Fox's Notes</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 01 Oct 2020 20:19:05 +0000</lastBuildDate><atom:link href="https://silvesterpang.github.io/tags/tortoisegit/index.xml" rel="self" type="application/rss+xml"/><item><title>Git Bash Display TortoiseGitPlink Fatal Error</title><link>https://silvesterpang.github.io/post/git-bash-auth-fatel-error/</link><pubDate>Thu, 01 Oct 2020 20:19:05 +0000</pubDate><guid>https://silvesterpang.github.io/post/git-bash-auth-fatel-error/</guid><description>Intro Git bash display fatal error on clone and push project in bash. However, when trying ssh -T git@githut.com will return access successful, that means the SSH configuration is correct
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>tortoisegit on A Fox&#39;s Notes</title>
+    <link>https://note.thefoxhut.com/tags/tortoisegit/</link>
+    <description>Recent content in tortoisegit on A Fox&#39;s Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 01 Oct 2020 20:19:05 +0000</lastBuildDate><atom:link href="https://note.thefoxhut.com/tags/tortoisegit/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Git Bash Display TortoiseGitPlink Fatal Error</title>
+      <link>https://note.thefoxhut.com/post/git-bash-auth-fatel-error/</link>
+      <pubDate>Thu, 01 Oct 2020 20:19:05 +0000</pubDate>
+      
+      <guid>https://note.thefoxhut.com/post/git-bash-auth-fatel-error/</guid>
+      <description>Intro Git bash display fatal error on clone and push project in bash. However, when trying ssh -T git@githut.com will return access successful, that means the SSH configuration is correct
 {% asset_img image1.png This is an image %}
 Solution This is due to the default ssh client is overwritted by tortoisegit. There are two methods to solve
-Method 1 go to tortoisegit -&amp;gt; setting -&amp;gt; network. Change the default ssh client from tortoisegitplink to ssh Method 2 change the enviornment variable GIT_SSH</description></item></channel></rss>
+Method 1  go to tortoisegit -&amp;gt; setting -&amp;gt; network. Change the default ssh client from tortoisegitplink to ssh  Method 2  change the enviornment variable GIT_SSH  </description>
+    </item>
+    
+  </channel>
+</rss>
