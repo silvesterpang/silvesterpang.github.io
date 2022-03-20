@@ -1,8 +1,10 @@
 ---
-title: Synology Resilio Sync SSL Cert
-date: 2020-01-30 21:05:12
+date: "2020-01-30 21:05:12"
 draft: false
-tags: ["synology", "resilio"]
+tags:
+- synology
+- resilio
+title: Synology Resilio Sync SSL Cert
 ---
 # Intro
 Configure the Resilio Sync SSL Cert in Synology

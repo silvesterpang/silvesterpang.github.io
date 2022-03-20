@@ -1,0 +1,38 @@
+baseURL: 'https://note.thefoxhut.com/'
+title: "A Fox's Notes"
+languageCode: 'en-us'
+theme: "PaperMod"
+enableRobotsTXT: false
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+permalinks:
+  posts: '/:title/'
+
+menu:
+  main:
+    - name: Home
+      weight: 10
+      identifier: home
+      url: /
+    - name: Tags
+      weight: 20
+      identifier: tags
+      url: /tags/
+
+params:
+  author: Fox
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+
+  homeInfoParams:
+    Title: "A Fox's Notes"
+    Content: >
+        A note powered by Hugo and PaperMod theme.
+        
+taxonomies:
+  category: categories
+  tag: tags
+  series: series

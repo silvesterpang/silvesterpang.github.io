@@ -1,8 +1,9 @@
 ---
-title: Mac OS Catalina X ZSH Shell
-date: 2019-12-03 22:02:12
+date: "2019-12-03 22:02:12"
 draft: false
-tags: ["macos"]
+tags:
+- macos
+title: Mac OS Catalina X ZSH Shell
 ---
 
 # Intro

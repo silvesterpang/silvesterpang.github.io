@@ -1,11 +1,12 @@
 ---
-title: "Git Context Menu"
-date: 2022-03-03T19:49:09+08:00
+date: "2022-03-03T19:49:09+08:00"
 draft: false
-tags: ["windows", "git"]
+tags:
+- windows
+- git
+title: Git Context Menu
 ---
 
-# Git Context Menu
 If install git via scoop, the "Open Bash Here" option is missing in right click menu. The below registry script is to add back the missing option
 
 ```bat

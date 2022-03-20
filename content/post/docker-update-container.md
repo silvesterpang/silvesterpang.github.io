@@ -1,8 +1,10 @@
 ---
-title: "Docker Update Container"
-date: 2022-02-25T22:16:41+08:00
+date: "2022-02-25T22:16:41+08:00"
 draft: false
-tags: ["docker", "portainer"]
+tags:
+- docker
+- portainer
+title: Docker Update Container
 ---
 
 # Upgrade container cmd

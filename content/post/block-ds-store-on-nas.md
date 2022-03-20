@@ -1,9 +1,10 @@
 ---
-title: Block .DS_Store Files on NAS
-date: 2020-08-30 21:30:58
-updated: 2020-08-30 21:30:58
+date: "2020-08-30 21:30:58"
 draft: false
-tags: ["synology"]
+tags:
+- synology
+title: Block .DS_Store Files on NAS
+updated: "2020-08-30 21:30:58"
 ---
 
 # Intro

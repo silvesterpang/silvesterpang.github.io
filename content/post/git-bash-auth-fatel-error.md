@@ -1,8 +1,10 @@
 ---
-title: Git Bash Display TortoiseGitPlink Fatal Error
-date: 2020-10-01 20:19:05
+date: "2020-10-01 20:19:05"
 draft: false
-tags: ["git", "tortoisegit"]
+tags:
+- git
+- tortoisegit
+title: Git Bash Display TortoiseGitPlink Fatal Error
 ---
 
 # Intro

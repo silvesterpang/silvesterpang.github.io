@@ -1,8 +1,9 @@
 ---
-title: "Hugo Quick Ref"
-date: 2022-02-24T20:31:07+08:00
+date: "2022-02-24T20:31:07+08:00"
 draft: false
-tags: ["hugo"]
+tags:
+- hugo
+title: Hugo Quick Ref
 ---
 
 # Hugo Quick Reference
