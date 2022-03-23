@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>esxi on A Fox&#39;s Notebook</title>
+    <link>https://note.thefoxhut.com/tags/esxi/</link>
+    <description>Recent content in esxi on A Fox&#39;s Notebook</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 23 Mar 2022 21:03:42 +0800</lastBuildDate><atom:link href="https://note.thefoxhut.com/tags/esxi/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Update ESXI via command</title>
+      <link>https://note.thefoxhut.com/post/update-esxi/</link>
+      <pubDate>Wed, 23 Mar 2022 21:03:42 +0800</pubDate>
+      
+      <guid>https://note.thefoxhut.com/post/update-esxi/</guid>
+      <description>VMware ESXI can be updated via command line, here is a quick reference
+ download latest patch from vmware web site https://customerconnect.vmware.com/patch. ESXI patch should be cumulative, therefore, download the latest one upload the patch to esxi datastore enable esxi ssh via web management console login esxi ssh root@server-ip and run below commend  esxcli software vib update -d &amp;#34;/vmfs/volumes/datastore1//ESXi600-201605001.zip&amp;#34;   reboot -f  done  </description>
+    </item>
+    
+  </channel>
+</rss>
