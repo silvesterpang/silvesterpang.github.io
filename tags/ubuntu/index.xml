@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>ubuntu on A Fox&#39;s Notebook</title>
+    <link>https://note.thefoxhut.com/tags/ubuntu/</link>
+    <description>Recent content in ubuntu on A Fox&#39;s Notebook</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 09 Apr 2022 18:30:57 +0800</lastBuildDate><atom:link href="https://note.thefoxhut.com/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ubuntu - System Restart Required</title>
+      <link>https://note.thefoxhut.com/post/ubuntu-system-restart-required/</link>
+      <pubDate>Sat, 09 Apr 2022 18:30:57 +0800</pubDate>
+      
+      <guid>https://note.thefoxhut.com/post/ubuntu-system-restart-required/</guid>
+      <description>TLDR To check update that caused system restart
+cat /var/run/reboot-required.pkgs To check changelog about the update
+xargs apt-get changelog &amp;lt; /var/run/reboot-required.pkgs reference https://linuxhandbook.com/system-restart-required-ubuntu/</description>
+    </item>
+    
+  </channel>
+</rss>
