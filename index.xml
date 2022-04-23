@@ -6,7 +6,17 @@
     <description>Recent content on A Fox&#39;s Notebook</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 09 Apr 2022 18:30:57 +0800</lastBuildDate><atom:link href="https://note.thefoxhut.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 23 Apr 2022 09:29:46 +0800</lastBuildDate><atom:link href="https://note.thefoxhut.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SSH Login Without Password</title>
+      <link>https://note.thefoxhut.com/post/ssh-login-without-password/</link>
+      <pubDate>Sat, 23 Apr 2022 09:29:46 +0800</pubDate>
+      
+      <guid>https://note.thefoxhut.com/post/ssh-login-without-password/</guid>
+      <description>Generate key ssh-keygen -t ed25519 [-C &amp;#34;your_email@example.com&amp;#34;] Upload public key to target PC two methods, upload via ssh-copy-id or manually
+Method 1 - ssh-copy-id ssh-copy-id remote_username@server_ip_address Method 2 - manually cat ~/.ssh/id_rsa.pub | ssh remote_username@server_ip_address &amp;#34;mkdir -p ~/.ssh &amp;amp;&amp;amp; chmod 700 ~/.ssh &amp;amp;&amp;amp; cat &amp;gt;&amp;gt; ~/.ssh/authorized_keys &amp;amp;&amp;amp; chmod 600 ~/.ssh/authorized_keys&amp;#34; Update ssh server config  remote to ssh server open /etc/ssh/sshd_config and modify as follow PasswordAuthentication no ChallengeResponseAuthentication no UsePAM no   Restart restart PC or run follow command</description>
+    </item>
+    
     <item>
       <title>Ubuntu - System Restart Required</title>
       <link>https://note.thefoxhut.com/post/ubuntu-system-restart-required/</link>
