@@ -14,7 +14,7 @@
       
       <guid>https://note.thefoxhut.com/post/git-context-menu/</guid>
       <description>If install git via scoop, the &amp;ldquo;Open Bash Here&amp;rdquo; option is missing in right click menu. The below registry script is to add back the missing option
-Windows Registry Editor Version 5.00  [HKEY_CLASSES_ROOT\*\shell\Open Git Bash] @=&amp;#34;Open Git Bash&amp;#34; &amp;#34;Icon&amp;#34;=&amp;#34;C:\\scoop_folder\\scoop\\apps\\git\\current\\git-bash.exe&amp;#34;  [HKEY_CLASSES_ROOT\*\shell\Open Git Bash\command] @=&amp;#34;\&amp;#34;C:\\scoop_folder\\scoop\\apps\\git\\current\\git-bash.exe\&amp;#34; \&amp;#34;--cd=%1\&amp;#34;&amp;#34;  ; This will make it appear when you right click ON a folder ; The &amp;#34;Icon&amp;#34; line can be removed if you don&amp;#39;t want the icon to appear  [HKEY_CLASSES_ROOT\Directory\shell\bash] @=&amp;#34;Open Git Bash&amp;#34; &amp;#34;Icon&amp;#34;=&amp;#34;C:\\scoop_folder\\scoop\\apps\\git\\current\\git-bash.</description>
+Windows Registry Editor Version 5.00 [HKEY_CLASSES_ROOT\*\shell\Open Git Bash] @=&amp;#34;Open Git Bash&amp;#34; &amp;#34;Icon&amp;#34;=&amp;#34;C:\\scoop_folder\\scoop\\apps\\git\\current\\git-bash.exe&amp;#34; [HKEY_CLASSES_ROOT\*\shell\Open Git Bash\command] @=&amp;#34;\&amp;#34;C:\\scoop_folder\\scoop\\apps\\git\\current\\git-bash.exe\&amp;#34; \&amp;#34;--cd=%1\&amp;#34;&amp;#34; ; This will make it appear when you right click ON a folder ; The &amp;#34;Icon&amp;#34; line can be removed if you don&amp;#39;t want the icon to appear [HKEY_CLASSES_ROOT\Directory\shell\bash] @=&amp;#34;Open Git Bash&amp;#34; &amp;#34;Icon&amp;#34;=&amp;#34;C:\\scoop_folder\\scoop\\apps\\git\\current\\git-bash.</description>
     </item>
     
   </channel>

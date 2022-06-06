@@ -14,7 +14,7 @@
       
       <guid>https://note.thefoxhut.com/post/ssh-sudo-without-password-prompt/</guid>
       <description>Ubuntu can use sudo without password prompt. the below is the step to enable it.
- open /etc/sudoers or create a file in /etc/ sudoers.d/ add a line user ALL=(ALL) NOPASSWD:ALL  done  </description>
+open /etc/sudoers or create a file in /etc/ sudoers.d/ add a line user ALL=(ALL) NOPASSWD:ALL done </description>
     </item>
     
     <item>
@@ -24,7 +24,7 @@
       
       <guid>https://note.thefoxhut.com/post/ssh-login-without-password/</guid>
       <description>Generate key ssh-keygen -t ed25519 [-C &amp;#34;your_email@example.com&amp;#34;] Upload public key to target PC two methods, upload via ssh-copy-id or manually
-Method 1 - ssh-copy-id ssh-copy-id remote_username@server_ip_address Method 2 - manually cat ~/.ssh/id_rsa.pub | ssh remote_username@server_ip_address &amp;#34;mkdir -p ~/.ssh &amp;amp;&amp;amp; chmod 700 ~/.ssh &amp;amp;&amp;amp; cat &amp;gt;&amp;gt; ~/.ssh/authorized_keys &amp;amp;&amp;amp; chmod 600 ~/.ssh/authorized_keys&amp;#34; Update ssh server config  remote to ssh server open /etc/ssh/sshd_config and modify as follow PasswordAuthentication no ChallengeResponseAuthentication no UsePAM no   Restart restart PC or run follow command</description>
+Method 1 - ssh-copy-id ssh-copy-id remote_username@server_ip_address Method 2 - manually cat ~/.ssh/id_rsa.pub | ssh remote_username@server_ip_address &amp;#34;mkdir -p ~/.ssh &amp;amp;&amp;amp; chmod 700 ~/.ssh &amp;amp;&amp;amp; cat &amp;gt;&amp;gt; ~/.ssh/authorized_keys &amp;amp;&amp;amp; chmod 600 ~/.ssh/authorized_keys&amp;#34; Update ssh server config remote to ssh server open /etc/ssh/sshd_config and modify as follow PasswordAuthentication no ChallengeResponseAuthentication no UsePAM no Restart restart PC or run follow command</description>
     </item>
     
     <item>
@@ -57,7 +57,7 @@ choco install &amp;lt;package&amp;gt; </description>
       
       <guid>https://note.thefoxhut.com/post/update-esxi/</guid>
       <description>VMware ESXI can be updated via command line, here is a quick reference
- download latest patch from vmware web site https://customerconnect.vmware.com/patch. ESXI patch should be cumulative, therefore, download the latest one upload the patch to esxi datastore enable esxi ssh via web management console login esxi ssh root@server-ip and run below commend  esxcli software vib update -d &amp;#34;/vmfs/volumes/datastore1//ESXi600-201605001.zip&amp;#34;   reboot -f  done  </description>
+download latest patch from vmware web site https://customerconnect.vmware.com/patch. ESXI patch should be cumulative, therefore, download the latest one upload the patch to esxi datastore enable esxi ssh via web management console login esxi ssh root@server-ip and run below commend esxcli software vib update -d &amp;#34;/vmfs/volumes/datastore1//ESXi600-201605001.zip&amp;#34; reboot -f done </description>
     </item>
     
     <item>
@@ -67,7 +67,7 @@ choco install &amp;lt;package&amp;gt; </description>
       
       <guid>https://note.thefoxhut.com/post/git-context-menu/</guid>
       <description>If install git via scoop, the &amp;ldquo;Open Bash Here&amp;rdquo; option is missing in right click menu. The below registry script is to add back the missing option
-Windows Registry Editor Version 5.00  [HKEY_CLASSES_ROOT\*\shell\Open Git Bash] @=&amp;#34;Open Git Bash&amp;#34; &amp;#34;Icon&amp;#34;=&amp;#34;C:\\scoop_folder\\scoop\\apps\\git\\current\\git-bash.exe&amp;#34;  [HKEY_CLASSES_ROOT\*\shell\Open Git Bash\command] @=&amp;#34;\&amp;#34;C:\\scoop_folder\\scoop\\apps\\git\\current\\git-bash.exe\&amp;#34; \&amp;#34;--cd=%1\&amp;#34;&amp;#34;  ; This will make it appear when you right click ON a folder ; The &amp;#34;Icon&amp;#34; line can be removed if you don&amp;#39;t want the icon to appear  [HKEY_CLASSES_ROOT\Directory\shell\bash] @=&amp;#34;Open Git Bash&amp;#34; &amp;#34;Icon&amp;#34;=&amp;#34;C:\\scoop_folder\\scoop\\apps\\git\\current\\git-bash.</description>
+Windows Registry Editor Version 5.00 [HKEY_CLASSES_ROOT\*\shell\Open Git Bash] @=&amp;#34;Open Git Bash&amp;#34; &amp;#34;Icon&amp;#34;=&amp;#34;C:\\scoop_folder\\scoop\\apps\\git\\current\\git-bash.exe&amp;#34; [HKEY_CLASSES_ROOT\*\shell\Open Git Bash\command] @=&amp;#34;\&amp;#34;C:\\scoop_folder\\scoop\\apps\\git\\current\\git-bash.exe\&amp;#34; \&amp;#34;--cd=%1\&amp;#34;&amp;#34; ; This will make it appear when you right click ON a folder ; The &amp;#34;Icon&amp;#34; line can be removed if you don&amp;#39;t want the icon to appear [HKEY_CLASSES_ROOT\Directory\shell\bash] @=&amp;#34;Open Git Bash&amp;#34; &amp;#34;Icon&amp;#34;=&amp;#34;C:\\scoop_folder\\scoop\\apps\\git\\current\\git-bash.</description>
     </item>
     
     <item>
@@ -77,7 +77,7 @@ Windows Registry Editor Version 5.00  [HKEY_CLASSES_ROOT\*\shell\Open Git Bash] 
       
       <guid>https://note.thefoxhut.com/post/docker-update-container/</guid>
       <description>Upgrade container cmd use portainer as example
-sudo docker stop portainer sudo docker rm portainer  #for docker ce sudo docker pull cr.portainer.io/portainer/portainer-ce:latest sudo docker run -d -p 8000:8000 -p 9000:9000 -p 9443:9443 \  --name=portainer --restart=always \  -v /var/run/docker.sock:/var/run/docker.sock \  -v portainer_data:/data \  cr.portainer.io/portainer/portainer-ce:latest  #for docker ee sudo docker pull cr.portainer.io/portainer/portainer-ee:latest sudo docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ee:latest </description>
+sudo docker stop portainer sudo docker rm portainer #for docker ce sudo docker pull cr.portainer.io/portainer/portainer-ce:latest sudo docker run -d -p 8000:8000 -p 9000:9000 -p 9443:9443 \ --name=portainer --restart=always \ -v /var/run/docker.sock:/var/run/docker.sock \ -v portainer_data:/data \ cr.portainer.io/portainer/portainer-ce:latest #for docker ee sudo docker pull cr.portainer.io/portainer/portainer-ee:latest sudo docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ee:latest </description>
     </item>
     
     <item>
@@ -98,7 +98,7 @@ sudo docker stop portainer sudo docker rm portainer  #for docker ce sudo docker 
       <description>Intro Git bash display fatal error on clone and push project in bash. However, when trying ssh -T git@githut.com will return access successful, that means the SSH configuration is correct
 {% asset_img image1.png This is an image %}
 Solution This is due to the default ssh client is overwritted by tortoisegit. There are two methods to solve
-Method 1  go to tortoisegit -&amp;gt; setting -&amp;gt; network. Change the default ssh client from tortoisegitplink to ssh  Method 2  change the enviornment variable GIT_SSH  </description>
+Method 1 go to tortoisegit -&amp;gt; setting -&amp;gt; network. Change the default ssh client from tortoisegitplink to ssh Method 2 change the enviornment variable GIT_SSH </description>
     </item>
     
     <item>
@@ -108,7 +108,7 @@ Method 1  go to tortoisegit -&amp;gt; setting -&amp;gt; network. Change the defa
       
       <guid>https://note.thefoxhut.com/post/block-ds-store-on-nas/</guid>
       <description>Intro MacOS always write DS_Store files on network share. These files are used by MacOS to store custom attributes but it is useless on non MacOS. So, it is better to clean up these existing DS_Store files and block these files on NAS permanently (Synology).
-Clean existing .DS_Store files  Enable SSH and login to NAS find / -name &amp;quot;.DS_Store&amp;quot; -delete  Set VETO files to block .DS_Store on NAS  Go to &amp;ldquo;Control Panel&amp;rdquo; -&amp;gt; &amp;ldquo;File Services&amp;rdquo; -&amp;gt; &amp;ldquo;Advanced Settings&amp;rdquo; Check Veto files Input &amp;ldquo;/.</description>
+Clean existing .DS_Store files Enable SSH and login to NAS find / -name &amp;quot;.DS_Store&amp;quot; -delete Set VETO files to block .DS_Store on NAS Go to &amp;ldquo;Control Panel&amp;rdquo; -&amp;gt; &amp;ldquo;File Services&amp;rdquo; -&amp;gt; &amp;ldquo;Advanced Settings&amp;rdquo; Check Veto files Input &amp;ldquo;/.</description>
     </item>
     
     <item>
@@ -119,11 +119,11 @@ Clean existing .DS_Store files  Enable SSH and login to NAS find / -name &amp;qu
       <guid>https://note.thefoxhut.com/post/synology-resilio-sync-ssl-cert/</guid>
       <description>Intro Configure the Resilio Sync SSL Cert in Synology
 Install Resilio Sync Download related package in Resilio Sync website and install the software
-Configure SSL Cert   ssh to synology
-  edit the configure file /usr/local/resiliosync/var/sync.conf
-  add ssl_certificate and ssl_private_key fields after force_http
-&amp;#34;force_https&amp;#34;: true, &amp;#34;ssl_certificate&amp;#34;: &amp;#34;/path/to/cert.pem&amp;#34;, &amp;#34;ssl_private_key&amp;#34;: &amp;#34;/path/to/privkey.pem&amp;#34;,   restart resilio sync
-   in vi, dd to delete line double check the permission and the path if fail  </description>
+Configure SSL Cert ssh to synology
+edit the configure file /usr/local/resiliosync/var/sync.conf
+add ssl_certificate and ssl_private_key fields after force_http
+&amp;#34;force_https&amp;#34;: true, &amp;#34;ssl_certificate&amp;#34;: &amp;#34;/path/to/cert.pem&amp;#34;, &amp;#34;ssl_private_key&amp;#34;: &amp;#34;/path/to/privkey.pem&amp;#34;, restart resilio sync
+in vi, dd to delete line double check the permission and the path if fail </description>
     </item>
     
     <item>
