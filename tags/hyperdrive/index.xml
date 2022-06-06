@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Hyperdrive on A Fox&#39;s Notebook</title>
+    <link>https://note.thefoxhut.com/tags/hyperdrive/</link>
+    <description>Recent content in Hyperdrive on A Fox&#39;s Notebook</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 06 Jun 2022 11:11:02 +0800</lastBuildDate><atom:link href="https://note.thefoxhut.com/tags/hyperdrive/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Synology Hyperdrive to Edu Onedrive</title>
+      <link>https://note.thefoxhut.com/post/synology-hyperdrive-to-edu-onedrive/</link>
+      <pubDate>Mon, 06 Jun 2022 11:11:02 +0800</pubDate>
+      
+      <guid>https://note.thefoxhut.com/post/synology-hyperdrive-to-edu-onedrive/</guid>
+      <description>Synology hyperdrive don&amp;rsquo;t support business onedrive. This is a quick reference for using docker to setup a HTTP proxy for login onedrive
+docker docker run --name sharepoint-proxy -d -p 3000:3000 -e PROXY_TARGET=https://example-my.sharepoint.net/ --restart always skleeschulte/basic-to-sharepoint-auth-http-proxy:v0.0.1 setup webdav in hyperdrive server: http://localhost:3000/personal/&amp;lt;username&amp;gt;/Documents username: username@domain.com Reference https://github.com/skleeschulte/basic-to-sharepoint-auth-http-proxy</description>
+    </item>
+    
+  </channel>
+</rss>
